@@ -1,6 +1,7 @@
 ## DSC-450 Databases for Analytics
 
 | Week | Topics |
+| --- | --- |
 | 0 | • Python tutorial and review <br>• Introduce yourself |
 | 1 | • General database intro (What is a database?) <br>• Relational model <br>• Functional dependencies <br>• Schema normalization |
 | 2 | • Functional dependencies and keys <br>• Normal forms and normalization <br>• CREATE, domains, INSERT, CHECK, CONSTRAINT, ALTER, UPDATE, DELETE |
