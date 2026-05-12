@@ -1,5 +1,7 @@
 import sqlite3
 import random
+import time
+from collections import defaultdict
 
 def create_and_populate_db(db_name="university.db"):
     conn = sqlite3.connect(db_name)
@@ -140,7 +142,7 @@ def update_and_verify(db_name="university.db"):
     cursor.execute("DROP VIEW IF EXISTS StudentEnrollmentView")
     cursor.execute("""
         CREATE VIEW StudentEnrollmentView AS
-        SELECT s.StudentID, s.Name, g.CName, g.CGrade, c.Department
+        SELECT s.StudentID, s.Name, s.GradYear, g.CName, g.CGrade, g.Date_grades, c.Department, c.Credits
         FROM Student s
         LEFT JOIN Grade g ON s.StudentID = g.StudentID
         LEFT JOIN Course c ON g.CName = c.CName
@@ -318,7 +320,7 @@ def load_txt_to_sqlite(txt_file="university_data_denormalized.txt", db_name="uni
     print(f"Loaded data into table 'FlatUniversity' in {db_name}")
     conn.close()
 
-# Part 5a and 5b
+# Part 5.a and 5.b
 def verify_violations_sql(db_name="university_flat.db"):
     conn = sqlite3.connect(db_name)
     cursor = conn.cursor()
@@ -349,6 +351,105 @@ def verify_violations_sql(db_name="university_flat.db"):
 
     conn.close()
 
+# Part 6.a
+def query_original_tables(db_name="university.db"):
+    conn = sqlite3.connect(db_name)
+    cursor = conn.cursor()
+
+    query = """
+    SELECT g.Date_grades, MAX(c.Credits), AVG(c.Credits), MIN(s.GradYear)
+    FROM Grade g
+    JOIN Course c ON g.CName = c.CName
+    JOIN Student s ON g.StudentID = s.StudentID
+    GROUP BY g.Date_grades;
+    """
+
+    start_time = time.perf_counter()
+    cursor.execute(query)
+    results = cursor.fetchall()
+    end_time = time.perf_counter()
+
+    conn.close()
+    print(f"Original SQL Execution Time: {end_time - start_time:.6f} seconds")
+    return results
+
+# Part 6.b
+def query_qx_using_view(db_name="university.db"):
+    conn = sqlite3.connect(db_name)
+    cursor = conn.cursor()
+
+    # Define Query
+    query_qx = """
+    SELECT 
+        Date_grades, 
+        MAX(Credits), 
+        AVG(Credits), 
+        MIN(GradYear)
+    FROM StudentEnrollmentView
+    WHERE Date_grades IS NOT NULL  -- Exclude non-enrolled students (NULL dates)
+    GROUP BY Date_grades;
+    """
+
+    # Time the execution
+    start_time = time.perf_counter()
+    cursor.execute(query_qx)
+    results = cursor.fetchall()
+    end_time = time.perf_counter()
+
+    # Display Results
+    print(f"View-Based SQL Execution Time: {end_time - start_time:.6f} seconds")
+    print("-" * 60)
+    print(f"{'Date':<12} | {'Max Credits':<12} | {'Avg Credits':<12} | {'Min GradYear':<12}")
+    print("-" * 60)
+    for row in results[:5]:  # Display first 5 for brevity
+        date, max_c, avg_c, min_g = row
+        print(f"{str(date):<12} | {max_c:<12} | {avg_c:<12.2f} | {min_g:<12}")
+
+    conn.close()
+    return results
+
+# Part 6.c
+def query_qx_with_python(file_path="university_data_denormalized.txt"):
+    data_groups = defaultdict(lambda: {'credits': [], 'grad_years': []})
+    start_time = time.perf_counter()
+
+    try:
+        with open(file_path, 'r') as f:
+            lines = f.readlines()
+
+            for line in lines[2:]:
+                parts = [p.strip() for p in line.split("|")]
+
+                if len(parts) >= 7:
+                    date = parts[4]
+                    credits_str = parts[5]
+                    grad_year_str = parts[6]
+
+                    # Skip non-enrolled students and header/footer noise
+                    if date.lower() not in ['none', 'null', 'date_grades']:
+                        try:
+                            # Safely convert to numeric types
+                            data_groups[date]['credits'].append(float(credits_str))
+                            data_groups[date]['grad_years'].append(int(grad_year_str))
+                        except ValueError:
+                            # This skips rows where the data isn't a number
+                            continue
+
+        # Aggregation Logic
+        results = []
+        for date in sorted(data_groups.keys()):
+            creds = data_groups[date]['credits']
+            years = data_groups[date]['grad_years']
+            if creds:
+                results.append((date, max(creds), sum(creds) / len(creds), min(years)))
+
+        end_time = time.perf_counter()
+        print(f"6.c Python TXT Execution Time: {end_time - start_time:.6f} seconds")
+        return results
+
+    except FileNotFoundError:
+        print("File not found. Please ensure Part 2 export ran successfully.")
+
 if __name__ == "__main__":
     create_and_populate_db() # creation of DB
     update_and_verify()  # Part 1
@@ -357,3 +458,16 @@ if __name__ == "__main__":
     detect_fd_violations() # Part 4
     load_txt_to_sqlite()   # Part 5
     verify_violations_sql() # Part 5a and 5b
+    original_results = query_original_tables() # Part 6.a
+    print(original_results)
+    query_qx_using_view() # Part 6.b
+    query_qx_with_python() # Part 6.c
+
+    # Part 6.d
+    '''
+    The three outputs from 6.a, 6.b and 6.c are same but with a difference of time it took to execute. The output
+    matched because the functional dependencies are preserved. It is observed that querying the original table is the
+    fastest method and the extraction by view is slower than the querying of original table. While, the method which
+    used Python seems okay here, but once the data is increased, the time will also increase accordingly because it
+    is linearly parsing the text, making it slower with more data.
+    '''
