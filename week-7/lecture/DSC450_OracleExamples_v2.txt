@@ -1,0 +1,207 @@
+
+SELECT CHR(9*8)||CHR(4*25+1)||CHR(12*9)||CHR(12*9)||CHR(111) AS msg
+    FROM dual;
+
+SELECT LEVEL n
+    FROM dual
+    CONNECT BY LEVEL <= 20;
+
+SELECT n
+	FROM (SELECT LEVEL n FROM dual CONNECT BY LEVEL <= 100)
+	WHERE n > 1
+	AND NOT EXISTS (
+	  SELECT 1
+	  FROM (SELECT LEVEL d FROM dual CONNECT BY LEVEL <= 100)
+	  WHERE d BETWEEN 2 AND FLOOR(SQRT(n))
+	  AND MOD(n, d) = 0
+	)
+	ORDER BY n;
+
+
+DROP TABLE salary_audit;
+DROP TABLE employees;
+DROP TABLE departments;
+
+CREATE TABLE departments(
+    department_id NUMBER PRIMARY KEY,
+    department_name VARCHAR(50)
+);
+
+
+CREATE TABLE employees (
+    employee_id NUMBER PRIMARY KEY,
+    first_name  VARCHAR2(30),
+    manager_id  NUMBER,
+    department_id NUMBER,
+    salary NUMBER,
+    CONSTRAINT fk_dept FOREIGN KEY (department_id)
+        REFERENCES departments (department_id)
+);
+
+CREATE TABLE salary_audit (
+    emplyee_id NUMBER,
+    salary NUMBER,
+    audit_date DATE DEFAULT SYSDATE
+);
+    
+
+
+------------------------------------------------------------
+-- DEPARTMENTS
+------------------------------------------------------------
+INSERT INTO departments VALUES (10, 'Finance');
+INSERT INTO departments VALUES (20, 'HR');
+INSERT INTO departments VALUES (30, 'IT');
+INSERT INTO departments VALUES (40, 'Sales');
+INSERT INTO departments VALUES (50, 'Management');
+
+INSERT INTO employees VALUES (150, 'Mallory', NULL, 50, 120000);
+
+-- Finance (10)
+INSERT INTO employees VALUES (100, 'Alice', 150, 10, 80000);
+INSERT INTO employees VALUES (101, 'Bob', 150, 10, 95000);
+INSERT INTO employees VALUES (111, 'Noah', 100, 10, 70000);
+INSERT INTO employees VALUES (112, 'Olivia', 100, 10, 67000);
+
+-- HR (20)
+INSERT INTO employees VALUES (102, 'Carol', 150, 20, 65000);
+INSERT INTO employees VALUES (113, 'Paul', 102, 20, 62000);
+INSERT INTO employees VALUES (114, 'Quinn', 102, 20, 61000);
+
+-- IT (30)
+INSERT INTO employees VALUES (103, 'Dan', 150, 30, 72000);
+INSERT INTO employees VALUES (104, 'Eve', 103, 30, 88000);
+INSERT INTO employees VALUES (105, 'Frank', 103, 30, 56000);
+INSERT INTO employees VALUES (106, 'Grace', 104, 30, 60000);
+INSERT INTO employees VALUES (107, 'Heidi', 104, 30, 62000);
+INSERT INTO employees VALUES (115, 'Rita', 104, 30, 59000);
+INSERT INTO employees VALUES (116, 'Steve', 104, 30, 61000);
+
+-- Sales (40)
+INSERT INTO employees VALUES (108, 'Ivan', 150, 40, 77000);
+INSERT INTO employees VALUES (109, 'Judy', 108, 40, 69000);
+INSERT INTO employees VALUES (117, 'Tom', 108, 40, 72000);
+INSERT INTO employees VALUES (118, 'Uma', 108, 40, 75000);
+INSERT INTO employees VALUES (119, 'Vera', 108, 40, 68000);
+
+
+WITH employees_fin AS 
+( SELECT employee_id, first_name, department_id 
+  FROM employees WHERE department_id = 10 ) 
+SELECT first_name FROM employees_fin 
+ORDER BY first_name FETCH FIRST 5 ROWS ONLY;
+
+
+WITH dept_sums AS (
+  SELECT department_id, SUM(salary) AS total_salary
+  FROM employees
+  GROUP BY department_id
+),
+high_salary AS (
+  SELECT department_id
+  FROM dept_sums
+  WHERE total_salary > 200000
+)
+SELECT d.department_name, h.department_id, ds.total_salary
+FROM departments d
+JOIN high_salary h ON d.department_id = h.department_id
+JOIN dept_sums ds ON d.department_id = ds.department_id;
+
+
+WITH org_chart (employee_id, first_name, manager_id, lvl) AS (
+  SELECT employee_id, first_name, manager_id, 1 AS lvl
+  FROM employees
+  WHERE manager_id IS NULL
+  UNION ALL
+  SELECT e.employee_id, e.first_name, e.manager_id, o.lvl + 1
+  FROM employees e
+  JOIN org_chart o ON e.manager_id = o.employee_id
+)
+SELECT LPAD(' ', (lvl - 1) * 2) || first_name AS hierarchy,
+       lvl
+FROM org_chart
+ORDER BY lvl, first_name;
+
+
+WITH dept_avg AS (
+  SELECT /*+ MATERIALIZE */
+         department_id, AVG(salary) AS avg_salary
+  FROM employees
+  GROUP BY department_id
+)
+SELECT *
+FROM dept_avg
+ORDER BY department_id;
+
+
+EXPLAIN PLAN FOR
+WITH dept_avg AS (
+  SELECT /*+ MATERIALIZE */
+         department_id, AVG(salary) AS avg_salary
+  FROM employees
+  GROUP BY department_id
+)
+SELECT *
+FROM dept_avg
+ORDER BY department_id;
+
+SELECT * FROM TABLE(DBMS_XPLAN.DISPLAY);
+
+--------------------------------------------------------------------------------
+
+DROP TABLE metrics;
+CREATE TABLE metrics (
+  id       NUMBER PRIMARY KEY,
+  service  VARCHAR2(20),
+  day      DATE NOT NULL,
+  value    NUMBER
+);
+
+INSERT INTO metrics VALUES (1, 'api',    DATE '2025-01-01', 10);
+INSERT INTO metrics VALUES (2, 'api',    DATE '2025-01-02', 15);
+INSERT INTO metrics VALUES (3, 'api',    DATE '2025-01-03', 12);
+INSERT INTO metrics VALUES (4, 'web',    DATE '2025-01-01',  9);
+INSERT INTO metrics VALUES (5, 'web',    DATE '2025-01-02', 11);
+INSERT INTO metrics VALUES (6, 'web',    DATE '2025-01-03', 20);
+INSERT INTO metrics VALUES (7, 'mobile', DATE '2025-01-01',  8);
+INSERT INTO metrics VALUES (8, 'mobile', DATE '2025-01-02', 13);
+INSERT INTO metrics VALUES (9, 'mobile', DATE '2025-01-03', 14);
+COMMIT;
+
+-- Running total per service
+SELECT
+  service,
+  day,
+  value,
+  SUM(value) OVER (
+    PARTITION BY service
+    ORDER BY day
+    ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
+  ) AS running_total
+FROM metrics
+ORDER BY service, day;
+
+-- Day-over-day change per service
+SELECT
+  service,
+  day,
+  value,
+  (value - LAG(value) OVER (PARTITION BY service ORDER BY day)) AS delta
+FROM metrics
+ORDER BY service, day;
+
+-- Top day per service
+SELECT service, day, value
+FROM (
+  SELECT
+    service,
+    day,
+    value,
+    ROW_NUMBER() OVER (
+      PARTITION BY service
+      ORDER BY value DESC, day DESC
+    ) AS rn
+  FROM metrics
+)
+WHERE rn = 1
+ORDER BY service;

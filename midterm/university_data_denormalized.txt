@@ -1,238 +1,238 @@
 StudentID       | Name            | GradYear        | CName           | CGrade          | Date_grades     | Department      | Credits        
 ---------------------------------------------------------------------------------------------------------------------------------------------
-1               | Robert Miller   | 2025            | Data Visualization | 2.8             | 2026-02-14      | Physics         | 4              
-1               | Robert Miller   | 2025            | Linear Algebra  | 2.2             | 2026-03-12      | Math            | 4              
-1               | Robert Miller   | 2025            | Natural Language Processing | 2.8             | 2026-04-17      | History         | 3              
-2               | Mary Brown      | 2025            | Calculus I      | 2.9             | 2026-04-16      | CS              | 4              
-2               | Mary Brown      | 2025            | Data Visualization | 3.1             | 2026-01-21      | Physics         | 4              
-2               | Mary Brown      | 2025            | Linear Algebra  | 3.9             | 2026-05-19      | Math            | 4              
-3               | Mary Miller     | 2025            | AI Agents       | 3.7             | 2026-05-10      | Physics         | 3              
-3               | Mary Miller     | 2025            | Intro to Python | 2.8             | 2026-05-17      | CS              | 4              
-3               | Mary Miller     | 2025            | Machine Learning | 3.4             | 2026-03-19      | CS              | 3              
-4               | Linda Johnson   | 2026            | Intro to Python | 2.4             | 2026-02-13      | CS              | 4              
-4               | Linda Johnson   | 2026            | Natural Language Processing | 2.8             | 2026-04-22      | History         | 3              
-4               | Linda Johnson   | 2026            | Quantum Physics | 2.5             | 2026-04-13      | Physics         | 4              
-5               | Robert Miller   | 2027            | Calculus I      | 3.1             | 2026-03-17      | CS              | 4              
-5               | Robert Miller   | 2027            | Linear Algebra  | 3.3             | 2026-02-19      | Math            | 4              
-5               | Robert Miller   | 2027            | Natural Language Processing | 2.8             | 2026-05-15      | History         | 3              
-6               | Robert Davis    | 2026            | Database Systems | 4               | 2026-03-24      | Data Science    | 3              
-6               | Robert Davis    | 2026            | Linear Algebra  | 2               | 2026-04-25      | Math            | 4              
-7               | Patricia Johnson | 2027            | Calculus I      | 2.4             | 2026-01-25      | CS              | 4              
-7               | Patricia Johnson | 2027            | Database Systems | 3.4             | 2026-05-12      | Data Science    | 3              
-7               | Patricia Johnson | 2027            | World History   | 3.5             | 2026-02-24      | Physics         | 3              
-8               | James Williams  | 2025            | Intro to Python | 3               | 2026-04-25      | CS              | 4              
-8               | James Williams  | 2025            | Quantum Physics | 2.9             | 2026-02-14      | Physics         | 4              
-9               | Mary Davis      | 2028            | Natural Language Processing | 2.6             | 2026-03-10      | History         | 3              
-10              | Patricia Jones  | 2026            | Calculus I      | 2.5             | 2026-02-10      | CS              | 4              
-10              | Patricia Jones  | 2026            | Linear Algebra  | 2.3             | 2026-02-12      | Math            | 4              
-11              | James Smith     | 2027            | None            | None            | None            | None            | None           
-12              | Mary Davis      | 2027            | Calculus I      | 2.8             | 2026-04-23      | CS              | 4              
-12              | Mary Davis      | 2027            | Natural Language Processing | 3.2             | 2026-01-10      | History         | 3              
-12              | Mary Davis      | 2027            | Quantum Physics | 3.2             | 2026-02-26      | Physics         | 4              
-13              | Patricia Davis  | 2026            | Machine Learning | 2.9             | 2026-03-11      | CS              | 3              
-14              | Jennifer Johnson | 2025            | Data Visualization | 3.9             | 2026-04-13      | Physics         | 4              
-14              | Jennifer Johnson | 2025            | Machine Learning | 2.5             | 2026-04-26      | CS              | 3              
-14              | Jennifer Johnson | 2025            | Natural Language Processing | 2.3             | 2026-05-18      | History         | 3              
-15              | John Smith      | 2027            | Database Systems | 3.1             | 2026-02-10      | Data Science    | 3              
-15              | John Smith      | 2027            | Intro to Python | 2.4             | 2026-04-20      | CS              | 4              
-15              | John Smith      | 2027            | World History   | 2.8             | 2026-04-17      | Physics         | 3              
-16              | Patricia Johnson | 2027            | Quantum Physics | 2.3             | 2026-02-18      | Physics         | 4              
-17              | Jennifer Smith  | 2025            | Database Systems | 2.5             | 2026-01-12      | Data Science    | 3              
-17              | Jennifer Smith  | 2025            | Intro to Python | 3.4             | 2026-02-27      | CS              | 4              
-17              | Jennifer Smith  | 2025            | Quantum Physics | 3.2             | 2026-01-13      | Physics         | 4              
-18              | James Garcia    | 2027            | Calculus I      | 3.2             | 2026-05-20      | CS              | 4              
-18              | James Garcia    | 2027            | Machine Learning | 3.8             | 2026-02-11      | CS              | 3              
-18              | James Garcia    | 2027            | Quantum Physics | 3.7             | 2026-01-22      | Physics         | 4              
-19              | Michael Brown   | 2028            | AI Agents       | 3               | 2026-01-24      | Physics         | 3              
-19              | Michael Brown   | 2028            | Data Visualization | 2.6             | 2026-02-24      | Physics         | 4              
-20              | Mary Brown      | 2025            | Calculus I      | 3.5             | 2026-02-22      | CS              | 4              
-20              | Mary Brown      | 2025            | Database Systems | 2.7             | 2026-03-26      | Data Science    | 3              
-20              | Mary Brown      | 2025            | Natural Language Processing | 3.7             | 2026-04-24      | History         | 3              
-21              | Michael Williams | 2026            | Natural Language Processing | 2.3             | 2026-01-27      | History         | 3              
-21              | Michael Williams | 2026            | World History   | 3.4             | 2026-05-15      | Physics         | 3              
-22              | Mary Miller     | 2027            | None            | None            | None            | None            | None           
-23              | Robert Brown    | 2028            | AI Agents       | 3.8             | 2026-04-16      | Physics         | 3              
-23              | Robert Brown    | 2028            | Data Visualization | 2.4             | 2026-02-23      | Physics         | 4              
-23              | Robert Brown    | 2028            | Machine Learning | 2.1             | 2026-02-20      | CS              | 3              
-24              | Patricia Davis  | 2025            | Calculus I      | 3.5             | 2026-04-19      | CS              | 4              
-24              | Patricia Davis  | 2025            | Machine Learning | 2.4             | 2026-02-15      | CS              | 3              
-25              | Mary Garcia     | 2025            | AI Agents       | 2.5             | 2026-04-19      | Physics         | 3              
-25              | Mary Garcia     | 2025            | Intro to Python | 3.5             | 2026-02-19      | CS              | 4              
-25              | Mary Garcia     | 2025            | Machine Learning | 3.7             | 2026-03-22      | CS              | 3              
-26              | Patricia Jones  | 2026            | Database Systems | 2.1             | 2026-05-13      | Data Science    | 3              
-26              | Patricia Jones  | 2026            | Intro to Python | 3.3             | 2026-04-12      | CS              | 4              
-26              | Patricia Jones  | 2026            | World History   | 2.7             | 2026-04-14      | Physics         | 3              
-27              | Michael Brown   | 2027            | AI Agents       | 2.2             | 2026-04-24      | Physics         | 3              
-27              | Michael Brown   | 2027            | Database Systems | 3.9             | 2026-03-14      | Data Science    | 3              
-27              | Michael Brown   | 2027            | Intro to Python | 3.2             | 2026-01-15      | CS              | 4              
-28              | Jennifer Garcia | 2028            | Data Visualization | 2.1             | 2026-05-11      | Physics         | 4              
-28              | Jennifer Garcia | 2028            | Linear Algebra  | 3.4             | 2026-04-26      | Math            | 4              
-28              | Jennifer Garcia | 2028            | World History   | 3               | 2026-02-20      | Physics         | 3              
-29              | Robert Davis    | 2028            | Database Systems | 2.7             | 2026-05-22      | Data Science    | 3              
-29              | Robert Davis    | 2028            | Natural Language Processing | 3.7             | 2026-02-23      | History         | 3              
-30              | Mary Davis      | 2025            | Data Visualization | 2.3             | 2026-01-10      | Physics         | 4              
-31              | Michael Smith   | 2028            | Calculus I      | 3.3             | 2026-03-14      | CS              | 4              
-31              | Michael Smith   | 2028            | Natural Language Processing | 3.3             | 2026-05-12      | History         | 3              
-31              | Michael Smith   | 2028            | World History   | 2.2             | 2026-05-24      | Physics         | 3              
-32              | Jennifer Williams | 2026            | Calculus I      | 2.7             | 2026-02-17      | CS              | 4              
-33              | Robert Davis    | 2028            | Calculus I      | 3.8             | 2026-01-26      | CS              | 4              
-33              | Robert Davis    | 2028            | Data Visualization | 3.5             | 2026-04-12      | Physics         | 4              
-33              | Robert Davis    | 2028            | Natural Language Processing | 2.9             | 2026-05-23      | History         | 3              
-34              | Patricia Davis  | 2028            | AI Agents       | 2.4             | 2026-01-21      | Physics         | 3              
-34              | Patricia Davis  | 2028            | Intro to Python | 2.4             | 2026-04-22      | CS              | 4              
-35              | Jennifer Brown  | 2028            | Linear Algebra  | 3.4             | 2026-02-26      | Math            | 4              
-35              | Jennifer Brown  | 2028            | Machine Learning | 2               | 2026-03-15      | CS              | 3              
-36              | Patricia Brown  | 2028            | Calculus I      | 3.6             | 2026-05-19      | CS              | 4              
-36              | Patricia Brown  | 2028            | Intro to Python | 2.6             | 2026-03-19      | CS              | 4              
-36              | Patricia Brown  | 2028            | Natural Language Processing | 3.1             | 2026-03-15      | History         | 3              
-37              | Jennifer Jones  | 2026            | Calculus I      | 3.1             | 2026-02-22      | CS              | 4              
-38              | Mary Smith      | 2026            | Linear Algebra  | 3.1             | 2026-01-18      | Math            | 4              
-39              | Michael Davis   | 2026            | Data Visualization | 3.3             | 2026-05-12      | Physics         | 4              
-39              | Michael Davis   | 2026            | Natural Language Processing | 2.9             | 2026-04-28      | History         | 3              
-40              | Linda Davis     | 2025            | Database Systems | 2.6             | 2026-05-11      | Data Science    | 3              
-40              | Linda Davis     | 2025            | Machine Learning | 3.5             | 2026-04-20      | CS              | 3              
-40              | Linda Davis     | 2025            | Natural Language Processing | 3               | 2026-04-17      | History         | 3              
-41              | Jennifer Davis  | 2028            | AI Agents       | 2.2             | 2026-02-11      | Physics         | 3              
-41              | Jennifer Davis  | 2028            | Machine Learning | 3.6             | 2026-02-22      | CS              | 3              
-42              | James Johnson   | 2025            | AI Agents       | 3.5             | 2026-04-28      | Physics         | 3              
-42              | James Johnson   | 2025            | Linear Algebra  | 3.8             | 2026-01-16      | Math            | 4              
-42              | James Johnson   | 2025            | World History   | 2.7             | 2026-04-28      | Physics         | 3              
-43              | Jennifer Davis  | 2027            | Linear Algebra  | 2.7             | 2026-02-27      | Math            | 4              
-43              | Jennifer Davis  | 2027            | Quantum Physics | 2.4             | 2026-04-17      | Physics         | 4              
-44              | James Garcia    | 2026            | Database Systems | 3.5             | 2026-01-20      | Data Science    | 3              
-44              | James Garcia    | 2026            | Machine Learning | 3.7             | 2026-01-12      | CS              | 3              
-44              | James Garcia    | 2026            | World History   | 2.8             | 2026-04-18      | Physics         | 3              
-45              | John Williams   | 2027            | Calculus I      | 3.3             | 2026-02-28      | CS              | 4              
-45              | John Williams   | 2027            | Machine Learning | 3.1             | 2026-05-20      | CS              | 3              
-46              | John Garcia     | 2027            | Linear Algebra  | 2.7             | 2026-05-20      | Math            | 4              
-46              | John Garcia     | 2027            | Machine Learning | 2.9             | 2026-04-21      | CS              | 3              
-46              | John Garcia     | 2027            | World History   | 3.5             | 2026-03-15      | Physics         | 3              
-47              | James Smith     | 2025            | AI Agents       | 2.6             | 2026-05-14      | Physics         | 3              
-47              | James Smith     | 2025            | Data Visualization | 3.4             | 2026-01-18      | Physics         | 4              
-47              | James Smith     | 2025            | Database Systems | 2.4             | 2026-03-21      | Data Science    | 3              
-48              | Michael Jones   | 2028            | Linear Algebra  | 2.6             | 2026-02-23      | Math            | 4              
-48              | Michael Jones   | 2028            | Natural Language Processing | 3.2             | 2026-04-28      | History         | 3              
-48              | Michael Jones   | 2028            | Quantum Physics | 3.4             | 2026-05-18      | Physics         | 4              
-49              | Mary Williams   | 2025            | Data Visualization | 3.8             | 2026-03-24      | Physics         | 4              
-49              | Mary Williams   | 2025            | Intro to Python | 3.7             | 2026-04-26      | CS              | 4              
-49              | Mary Williams   | 2025            | Natural Language Processing | 3.1             | 2026-01-28      | History         | 3              
-50              | Michael Jones   | 2027            | Calculus I      | 2.2             | 2026-05-19      | CS              | 4              
-50              | Michael Jones   | 2027            | Intro to Python | 3.7             | 2026-02-10      | CS              | 4              
-51              | John Miller     | 2026            | AI Agents       | 3.4             | 2026-03-14      | Physics         | 3              
-51              | John Miller     | 2026            | Calculus I      | 3.9             | 2026-05-15      | CS              | 4              
-51              | John Miller     | 2026            | Intro to Python | 2.8             | 2026-05-11      | CS              | 4              
-52              | Michael Johnson | 2026            | AI Agents       | 2               | 2026-02-26      | Physics         | 3              
-52              | Michael Johnson | 2026            | Linear Algebra  | 2.5             | 2026-03-12      | Math            | 4              
-52              | Michael Johnson | 2026            | World History   | 2.2             | 2026-04-25      | Physics         | 3              
-53              | Jennifer Miller | 2028            | Data Visualization | 2.7             | 2026-03-18      | Physics         | 4              
-53              | Jennifer Miller | 2028            | Intro to Python | 3.8             | 2026-05-28      | CS              | 4              
-53              | Jennifer Miller | 2028            | Machine Learning | 3.7             | 2026-03-22      | CS              | 3              
-54              | Michael Davis   | 2028            | Calculus I      | 2.3             | 2026-03-12      | CS              | 4              
-54              | Michael Davis   | 2028            | Data Visualization | 2.5             | 2026-05-19      | Physics         | 4              
-54              | Michael Davis   | 2028            | Quantum Physics | 3.9             | 2026-05-18      | Physics         | 4              
-55              | James Johnson   | 2025            | AI Agents       | 2.2             | 2026-04-19      | Physics         | 3              
-55              | James Johnson   | 2025            | Machine Learning | 3.9             | 2026-05-11      | CS              | 3              
-55              | James Johnson   | 2025            | Quantum Physics | 2.6             | 2026-05-20      | Physics         | 4              
-56              | Mary Garcia     | 2026            | Linear Algebra  | 3.4             | 2026-02-20      | Math            | 4              
-56              | Mary Garcia     | 2026            | Natural Language Processing | 2.6             | 2026-03-27      | History         | 3              
-56              | Mary Garcia     | 2026            | World History   | 3.4             | 2026-01-10      | Physics         | 3              
-57              | Mary Johnson    | 2026            | Database Systems | 3.9             | 2026-04-11      | Data Science    | 3              
-57              | Mary Johnson    | 2026            | Natural Language Processing | 2.7             | 2026-04-11      | History         | 3              
-57              | Mary Johnson    | 2026            | World History   | 3.3             | 2026-03-19      | Physics         | 3              
-58              | Linda Johnson   | 2027            | AI Agents       | 2.8             | 2026-05-13      | Physics         | 3              
-58              | Linda Johnson   | 2027            | Natural Language Processing | 3.3             | 2026-05-19      | History         | 3              
-58              | Linda Johnson   | 2027            | Quantum Physics | 2.1             | 2026-01-19      | Physics         | 4              
-59              | Patricia Davis  | 2026            | Linear Algebra  | 2.5             | 2026-03-10      | Math            | 4              
-59              | Patricia Davis  | 2026            | Quantum Physics | 3.7             | 2026-03-18      | Physics         | 4              
-59              | Patricia Davis  | 2026            | World History   | 3.7             | 2026-04-24      | Physics         | 3              
-60              | Mary Miller     | 2027            | Calculus I      | 3.3             | 2026-01-18      | CS              | 4              
-60              | Mary Miller     | 2027            | Database Systems | 3.2             | 2026-05-20      | Data Science    | 3              
-60              | Mary Miller     | 2027            | Quantum Physics | 4               | 2026-01-25      | Physics         | 4              
-61              | James Miller    | 2028            | Database Systems | 3.3             | 2026-01-21      | Data Science    | 3              
-61              | James Miller    | 2028            | Linear Algebra  | 2.2             | 2026-03-25      | Math            | 4              
-61              | James Miller    | 2028            | World History   | 2.2             | 2026-02-18      | Physics         | 3              
-62              | Linda Smith     | 2027            | AI Agents       | 3.7             | 2026-03-17      | Physics         | 3              
-62              | Linda Smith     | 2027            | Database Systems | 3.7             | 2026-02-21      | Data Science    | 3              
-62              | Linda Smith     | 2027            | World History   | 2.3             | 2026-01-28      | Physics         | 3              
-63              | Michael Garcia  | 2026            | None            | None            | None            | None            | None           
-64              | Robert Williams | 2025            | Data Visualization | 2.7             | 2026-01-14      | Physics         | 4              
-64              | Robert Williams | 2025            | World History   | 2.2             | 2026-02-11      | Physics         | 3              
-65              | Linda Davis     | 2028            | Intro to Python | 2.1             | 2026-03-11      | CS              | 4              
-65              | Linda Davis     | 2028            | Machine Learning | 3.2             | 2026-05-25      | CS              | 3              
-65              | Linda Davis     | 2028            | Quantum Physics | 4               | 2026-04-23      | Physics         | 4              
-66              | Jennifer Brown  | 2028            | AI Agents       | 3.5             | 2026-01-19      | Physics         | 3              
-66              | Jennifer Brown  | 2028            | Calculus I      | 2.2             | 2026-02-15      | CS              | 4              
-66              | Jennifer Brown  | 2028            | Natural Language Processing | 2.7             | 2026-03-28      | History         | 3              
-67              | John Smith      | 2027            | Database Systems | 2.8             | 2026-01-27      | Data Science    | 3              
-67              | John Smith      | 2027            | Natural Language Processing | 2.6             | 2026-05-20      | History         | 3              
-67              | John Smith      | 2027            | World History   | 3.7             | 2026-01-13      | Physics         | 3              
-68              | Michael Garcia  | 2028            | Intro to Python | 2.5             | 2026-05-10      | CS              | 4              
-68              | Michael Garcia  | 2028            | Machine Learning | 3.5             | 2026-05-10      | CS              | 3              
-69              | Robert Jones    | 2025            | AI Agents       | 2.4             | 2026-04-23      | Physics         | 3              
-69              | Robert Jones    | 2025            | Machine Learning | 3.1             | 2026-01-23      | CS              | 3              
-70              | Jennifer Williams | 2025            | Calculus I      | 3.5             | 2026-04-28      | CS              | 4              
-70              | Jennifer Williams | 2025            | Linear Algebra  | 3.7             | 2026-02-22      | Math            | 4              
-71              | Linda Brown     | 2028            | Calculus I      | 2.8             | 2026-03-17      | CS              | 4              
-72              | John Jones      | 2028            | Data Visualization | 3.8             | 2026-02-19      | Physics         | 4              
-73              | Mary Smith      | 2026            | Database Systems | 2.4             | 2026-03-10      | Data Science    | 3              
-74              | John Jones      | 2028            | World History   | 3.1             | 2026-03-11      | Physics         | 3              
-75              | John Williams   | 2027            | Calculus I      | 3.7             | 2026-02-18      | CS              | 4              
-75              | John Williams   | 2027            | Data Visualization | 2.6             | 2026-02-25      | Physics         | 4              
-76              | James Brown     | 2026            | Intro to Python | 3.7             | 2026-01-20      | CS              | 4              
-76              | James Brown     | 2026            | Machine Learning | 3.9             | 2026-05-26      | CS              | 3              
-76              | James Brown     | 2026            | Quantum Physics | 2.2             | 2026-03-17      | Physics         | 4              
-77              | Patricia Jones  | 2025            | Intro to Python | 3.6             | 2026-03-22      | CS              | 4              
-77              | Patricia Jones  | 2025            | Quantum Physics | 3.8             | 2026-03-10      | Physics         | 4              
-77              | Patricia Jones  | 2025            | World History   | 2.5             | 2026-03-16      | Physics         | 3              
-78              | Patricia Davis  | 2026            | Quantum Physics | 3.9             | 2026-01-15      | Physics         | 4              
-79              | Linda Williams  | 2026            | Calculus I      | 3.6             | 2026-01-19      | CS              | 4              
-79              | Linda Williams  | 2026            | Data Visualization | 3.7             | 2026-04-25      | Physics         | 4              
-79              | Linda Williams  | 2026            | Natural Language Processing | 2.4             | 2026-04-27      | History         | 3              
-80              | Patricia Garcia | 2025            | AI Agents       | 2.9             | 2026-03-12      | Physics         | 3              
-80              | Patricia Garcia | 2025            | Intro to Python | 3.2             | 2026-01-11      | CS              | 4              
-80              | Patricia Garcia | 2025            | Machine Learning | 3               | 2026-02-14      | CS              | 3              
-81              | Michael Johnson | 2026            | Linear Algebra  | 3.8             | 2026-01-18      | Math            | 4              
-81              | Michael Johnson | 2026            | Natural Language Processing | 3.8             | 2026-05-25      | History         | 3              
-82              | Linda Garcia    | 2027            | Quantum Physics | 3.1             | 2026-03-17      | Physics         | 4              
-83              | Patricia Williams | 2027            | None            | None            | None            | None            | None           
-84              | Linda Williams  | 2028            | Natural Language Processing | 2.1             | 2026-05-13      | History         | 3              
-84              | Linda Williams  | 2028            | World History   | 2.1             | 2026-01-16      | Physics         | 3              
-85              | Robert Miller   | 2026            | Calculus I      | 3.8             | 2026-03-23      | CS              | 4              
-85              | Robert Miller   | 2026            | Intro to Python | 2.5             | 2026-01-10      | CS              | 4              
-86              | Patricia Johnson | 2027            | None            | None            | None            | None            | None           
-87              | Jennifer Brown  | 2028            | Data Visualization | 3.3             | 2026-05-25      | Physics         | 4              
-87              | Jennifer Brown  | 2028            | Database Systems | 2.8             | 2026-05-25      | Data Science    | 3              
-88              | James Williams  | 2026            | AI Agents       | 3               | 2026-03-24      | Physics         | 3              
-88              | James Williams  | 2026            | Database Systems | 3.4             | 2026-05-27      | Data Science    | 3              
-88              | James Williams  | 2026            | World History   | 3.5             | 2026-05-12      | Physics         | 3              
-89              | John Miller     | 2028            | Calculus I      | 3.7             | 2026-04-24      | CS              | 4              
-89              | John Miller     | 2028            | World History   | 2.3             | 2026-01-10      | Physics         | 3              
-90              | Robert Garcia   | 2026            | Quantum Physics | 2.9             | 2026-05-15      | Physics         | 4              
-90              | Robert Garcia   | 2026            | World History   | 2.7             | 2026-02-12      | Physics         | 3              
-91              | Michael Brown   | 2025            | Database Systems | 2               | 2026-05-25      | Data Science    | 3              
-91              | Michael Brown   | 2025            | Linear Algebra  | 2.9             | 2026-05-26      | Math            | 4              
-91              | Michael Brown   | 2025            | World History   | 4               | 2026-02-16      | Physics         | 3              
-92              | Patricia Garcia | 2027            | AI Agents       | 3.7             | 2026-03-21      | Physics         | 3              
-92              | Patricia Garcia | 2027            | Quantum Physics | 3.3             | 2026-05-14      | Physics         | 4              
-93              | Jennifer Garcia | 2026            | Data Visualization | 2.8             | 2026-03-23      | Physics         | 4              
-93              | Jennifer Garcia | 2026            | Database Systems | 3.4             | 2026-03-28      | Data Science    | 3              
-93              | Jennifer Garcia | 2026            | Intro to Python | 2.4             | 2026-02-15      | CS              | 4              
-94              | John Brown      | 2026            | Calculus I      | 3.7             | 2026-04-27      | CS              | 4              
-94              | John Brown      | 2026            | Linear Algebra  | 3.3             | 2026-02-28      | Math            | 4              
-95              | James Williams  | 2025            | Data Visualization | 3.4             | 2026-05-24      | Physics         | 4              
-95              | James Williams  | 2025            | Intro to Python | 3.7             | 2026-02-13      | CS              | 4              
-95              | James Williams  | 2025            | World History   | 2.3             | 2026-03-13      | Physics         | 3              
-96              | John Williams   | 2025            | AI Agents       | 3.5             | 2026-01-27      | Physics         | 3              
-97              | Robert Brown    | 2027            | AI Agents       | 3.6             | 2026-03-22      | Physics         | 3              
-97              | Robert Brown    | 2027            | Machine Learning | 3.2             | 2026-02-16      | CS              | 3              
-98              | Mary Brown      | 2027            | Intro to Python | 3.8             | 2026-05-12      | CS              | 4              
-98              | Mary Brown      | 2027            | Linear Algebra  | 3.7             | 2026-05-12      | Math            | 4              
-99              | Mary Johnson    | 2027            | Calculus I      | 3.9             | 2026-05-12      | CS              | 4              
-99              | Mary Johnson    | 2027            | Machine Learning | 4               | 2026-05-12      | CS              | 3              
-100             | Patricia Brown  | 2025            | Database Systems | 3.5             | 2026-05-12      | Data Science    | 3              
-101             | New Student A   | Intro to Python | 3.5             | History        
-102             | New Student B   | Intro to Python | 3.2             | Biology        
-103             | New Student C   | Machine Learning | 4.0             | Art            
-98              | Patricia Smith  | Intro to Python | 1.0             | CS             
-98              | Patricia Smith  | Intro to Python | 2.5             | CS             
-99              | Linda Garcia    | Machine Learning | 0.0             | CS             
+1               | Linda Jones     | 2026            | Data Visualization | 3.9             | 2026-01-18      | CS              | 4              
+1               | Linda Jones     | 2026            | Database Systems | 2.3             | 2026-04-18      | Math            | 4              
+2               | Robert Smith    | 2028            | AI Agents       | 3.8             | 2026-04-23      | History         | 3              
+2               | Robert Smith    | 2028            | Linear Algebra  | 2.3             | 2026-05-16      | Math            | 4              
+2               | Robert Smith    | 2028            | Quantum Physics | 2.6             | 2026-05-12      | CS              | 3              
+3               | Mary Davis      | 2026            | Database Systems | 3.4             | 2026-01-24      | Math            | 4              
+3               | Mary Davis      | 2026            | Linear Algebra  | 2.8             | 2026-01-21      | Math            | 4              
+3               | Mary Davis      | 2026            | Machine Learning | 3.9             | 2026-01-17      | Math            | 4              
+4               | Mary Jones      | 2026            | AI Agents       | 2.9             | 2026-04-11      | History         | 3              
+4               | Mary Jones      | 2026            | Data Visualization | 2.7             | 2026-02-25      | CS              | 4              
+5               | Patricia Garcia | 2026            | Data Visualization | 2.7             | 2026-01-28      | CS              | 4              
+5               | Patricia Garcia | 2026            | Database Systems | 2.4             | 2026-04-24      | Math            | 4              
+6               | Mary Jones      | 2026            | None            | None            | None            | None            | None           
+7               | James Williams  | 2025            | Database Systems | 3               | 2026-04-23      | Math            | 4              
+8               | Robert Jones    | 2027            | AI Agents       | 3.7             | 2026-04-12      | History         | 3              
+8               | Robert Jones    | 2027            | Data Visualization | 3.3             | 2026-01-10      | CS              | 4              
+8               | Robert Jones    | 2027            | Machine Learning | 3.7             | 2026-04-17      | Math            | 4              
+9               | Robert Davis    | 2027            | Linear Algebra  | 2.3             | 2026-01-16      | Math            | 4              
+9               | Robert Davis    | 2027            | Natural Language Processing | 3               | 2026-05-11      | Math            | 4              
+10              | Jennifer Miller | 2026            | Data Visualization | 3.8             | 2026-01-24      | CS              | 4              
+10              | Jennifer Miller | 2026            | Intro to Python | 2               | 2026-02-11      | CS              | 3              
+11              | Jennifer Brown  | 2026            | AI Agents       | 2.8             | 2026-02-19      | History         | 3              
+11              | Jennifer Brown  | 2026            | Calculus I      | 2.4             | 2026-05-21      | Physics         | 4              
+11              | Jennifer Brown  | 2026            | World History   | 2.7             | 2026-02-19      | History         | 3              
+12              | John Smith      | 2026            | Linear Algebra  | 3.9             | 2026-04-26      | Math            | 4              
+12              | John Smith      | 2026            | Natural Language Processing | 2.7             | 2026-02-11      | Math            | 4              
+12              | John Smith      | 2026            | Quantum Physics | 2.9             | 2026-03-26      | CS              | 3              
+13              | Linda Johnson   | 2025            | Database Systems | 3.5             | 2026-05-18      | Math            | 4              
+13              | Linda Johnson   | 2025            | Linear Algebra  | 2.9             | 2026-03-20      | Math            | 4              
+13              | Linda Johnson   | 2025            | Machine Learning | 3.5             | 2026-03-17      | Math            | 4              
+14              | Michael Davis   | 2025            | Calculus I      | 2.4             | 2026-05-26      | Physics         | 4              
+14              | Michael Davis   | 2025            | Machine Learning | 2.8             | 2026-05-24      | Math            | 4              
+14              | Michael Davis   | 2025            | Natural Language Processing | 3.4             | 2026-01-17      | Math            | 4              
+15              | James Miller    | 2025            | Data Visualization | 3.7             | 2026-05-23      | CS              | 4              
+15              | James Miller    | 2025            | Intro to Python | 3.2             | 2026-02-21      | CS              | 3              
+15              | James Miller    | 2025            | Natural Language Processing | 3.8             | 2026-01-24      | Math            | 4              
+16              | John Brown      | 2028            | AI Agents       | 2               | 2026-05-25      | History         | 3              
+16              | John Brown      | 2028            | Calculus I      | 2.6             | 2026-05-24      | Physics         | 4              
+16              | John Brown      | 2028            | Quantum Physics | 2.2             | 2026-02-11      | CS              | 3              
+17              | James Garcia    | 2027            | Data Visualization | 3.2             | 2026-02-22      | CS              | 4              
+17              | James Garcia    | 2027            | Machine Learning | 3               | 2026-04-20      | Math            | 4              
+17              | James Garcia    | 2027            | World History   | 3               | 2026-02-23      | History         | 3              
+18              | Linda Garcia    | 2027            | AI Agents       | 3               | 2026-04-23      | History         | 3              
+19              | John Jones      | 2027            | None            | None            | None            | None            | None           
+20              | Patricia Davis  | 2025            | Data Visualization | 2.7             | 2026-03-23      | CS              | 4              
+20              | Patricia Davis  | 2025            | Machine Learning | 3.5             | 2026-04-13      | Math            | 4              
+20              | Patricia Davis  | 2025            | World History   | 3.8             | 2026-03-12      | History         | 3              
+21              | John Brown      | 2028            | Calculus I      | 3.2             | 2026-05-10      | Physics         | 4              
+21              | John Brown      | 2028            | Machine Learning | 2.7             | 2026-01-11      | Math            | 4              
+22              | Mary Brown      | 2028            | Machine Learning | 2.8             | 2026-04-27      | Math            | 4              
+22              | Mary Brown      | 2028            | World History   | 2.2             | 2026-05-15      | History         | 3              
+23              | Patricia Johnson | 2028            | Calculus I      | 3.2             | 2026-02-19      | Physics         | 4              
+23              | Patricia Johnson | 2028            | Database Systems | 2.8             | 2026-04-16      | Math            | 4              
+23              | Patricia Johnson | 2028            | World History   | 3.2             | 2026-02-20      | History         | 3              
+24              | Mary Williams   | 2027            | Intro to Python | 3.2             | 2026-01-22      | CS              | 3              
+24              | Mary Williams   | 2027            | Linear Algebra  | 3.4             | 2026-05-12      | Math            | 4              
+25              | Michael Brown   | 2027            | Calculus I      | 2.6             | 2026-04-20      | Physics         | 4              
+26              | Linda Garcia    | 2025            | Intro to Python | 2.5             | 2026-03-24      | CS              | 3              
+26              | Linda Garcia    | 2025            | Machine Learning | 3.3             | 2026-02-24      | Math            | 4              
+26              | Linda Garcia    | 2025            | Quantum Physics | 2.1             | 2026-05-25      | CS              | 3              
+27              | Patricia Brown  | 2027            | Quantum Physics | 3.4             | 2026-01-16      | CS              | 3              
+27              | Patricia Brown  | 2027            | World History   | 2.1             | 2026-01-28      | History         | 3              
+28              | Robert Garcia   | 2025            | Calculus I      | 3               | 2026-04-18      | Physics         | 4              
+28              | Robert Garcia   | 2025            | Data Visualization | 2.1             | 2026-03-13      | CS              | 4              
+28              | Robert Garcia   | 2025            | World History   | 3.3             | 2026-03-28      | History         | 3              
+29              | Mary Jones      | 2028            | AI Agents       | 3.7             | 2026-01-26      | History         | 3              
+29              | Mary Jones      | 2028            | Intro to Python | 2.6             | 2026-01-15      | CS              | 3              
+29              | Mary Jones      | 2028            | Machine Learning | 3               | 2026-01-19      | Math            | 4              
+30              | Mary Miller     | 2028            | Data Visualization | 3.6             | 2026-01-19      | CS              | 4              
+31              | James Smith     | 2025            | Natural Language Processing | 2.2             | 2026-05-11      | Math            | 4              
+32              | Robert Williams | 2027            | Database Systems | 3.3             | 2026-03-19      | Math            | 4              
+32              | Robert Williams | 2027            | Quantum Physics | 2.7             | 2026-04-19      | CS              | 3              
+32              | Robert Williams | 2027            | World History   | 2.1             | 2026-04-23      | History         | 3              
+33              | Michael Davis   | 2026            | Calculus I      | 4               | 2026-03-13      | Physics         | 4              
+33              | Michael Davis   | 2026            | Quantum Physics | 2.4             | 2026-03-20      | CS              | 3              
+34              | Jennifer Miller | 2025            | AI Agents       | 3.8             | 2026-01-12      | History         | 3              
+34              | Jennifer Miller | 2025            | Data Visualization | 3.4             | 2026-03-16      | CS              | 4              
+34              | Jennifer Miller | 2025            | Quantum Physics | 2.2             | 2026-04-28      | CS              | 3              
+35              | Robert Jones    | 2026            | Linear Algebra  | 2.8             | 2026-01-18      | Math            | 4              
+35              | Robert Jones    | 2026            | World History   | 3.9             | 2026-05-20      | History         | 3              
+36              | Linda Brown     | 2027            | Database Systems | 2.1             | 2026-04-12      | Math            | 4              
+36              | Linda Brown     | 2027            | Intro to Python | 2.5             | 2026-03-12      | CS              | 3              
+36              | Linda Brown     | 2027            | Machine Learning | 3               | 2026-05-11      | Math            | 4              
+37              | Patricia Miller | 2026            | Intro to Python | 2.3             | 2026-03-10      | CS              | 3              
+37              | Patricia Miller | 2026            | Quantum Physics | 2.4             | 2026-03-16      | CS              | 3              
+37              | Patricia Miller | 2026            | World History   | 2.8             | 2026-02-21      | History         | 3              
+38              | John Davis      | 2027            | Machine Learning | 2.9             | 2026-01-18      | Math            | 4              
+38              | John Davis      | 2027            | Natural Language Processing | 2.2             | 2026-01-28      | Math            | 4              
+38              | John Davis      | 2027            | World History   | 3.7             | 2026-03-20      | History         | 3              
+39              | Linda Davis     | 2028            | Data Visualization | 3.3             | 2026-03-15      | CS              | 4              
+39              | Linda Davis     | 2028            | Machine Learning | 3.5             | 2026-03-23      | Math            | 4              
+40              | James Jones     | 2026            | Calculus I      | 2.3             | 2026-02-21      | Physics         | 4              
+40              | James Jones     | 2026            | Data Visualization | 3.5             | 2026-03-10      | CS              | 4              
+41              | Linda Johnson   | 2026            | AI Agents       | 3.6             | 2026-05-19      | History         | 3              
+41              | Linda Johnson   | 2026            | Data Visualization | 2.7             | 2026-05-24      | CS              | 4              
+41              | Linda Johnson   | 2026            | World History   | 2.8             | 2026-03-19      | History         | 3              
+42              | Linda Williams  | 2028            | Calculus I      | 4               | 2026-01-18      | Physics         | 4              
+42              | Linda Williams  | 2028            | Intro to Python | 3.3             | 2026-02-24      | CS              | 3              
+42              | Linda Williams  | 2028            | Machine Learning | 3.6             | 2026-05-27      | Math            | 4              
+43              | Jennifer Jones  | 2028            | Machine Learning | 3               | 2026-01-16      | Math            | 4              
+43              | Jennifer Jones  | 2028            | Natural Language Processing | 2.1             | 2026-02-20      | Math            | 4              
+43              | Jennifer Jones  | 2028            | World History   | 2.8             | 2026-05-23      | History         | 3              
+44              | Michael Smith   | 2028            | Natural Language Processing | 3.7             | 2026-01-22      | Math            | 4              
+45              | Robert Davis    | 2026            | Data Visualization | 2.3             | 2026-02-22      | CS              | 4              
+45              | Robert Davis    | 2026            | Database Systems | 3.3             | 2026-02-28      | Math            | 4              
+45              | Robert Davis    | 2026            | Quantum Physics | 3.4             | 2026-02-17      | CS              | 3              
+46              | Michael Williams | 2025            | Quantum Physics | 2.5             | 2026-02-22      | CS              | 3              
+47              | Robert Brown    | 2026            | AI Agents       | 3               | 2026-04-25      | History         | 3              
+47              | Robert Brown    | 2026            | Calculus I      | 2.3             | 2026-04-15      | Physics         | 4              
+48              | Michael Smith   | 2026            | AI Agents       | 2.4             | 2026-01-23      | History         | 3              
+48              | Michael Smith   | 2026            | Machine Learning | 3.9             | 2026-05-22      | Math            | 4              
+48              | Michael Smith   | 2026            | World History   | 2.1             | 2026-04-18      | History         | 3              
+49              | James Smith     | 2028            | Calculus I      | 3.6             | 2026-05-19      | Physics         | 4              
+49              | James Smith     | 2028            | Data Visualization | 2.3             | 2026-05-20      | CS              | 4              
+49              | James Smith     | 2028            | World History   | 3.8             | 2026-03-17      | History         | 3              
+50              | Michael Johnson | 2025            | Database Systems | 2.8             | 2026-03-20      | Math            | 4              
+50              | Michael Johnson | 2025            | World History   | 2.6             | 2026-01-26      | History         | 3              
+51              | Robert Jones    | 2025            | Natural Language Processing | 2.7             | 2026-01-21      | Math            | 4              
+51              | Robert Jones    | 2025            | World History   | 2.6             | 2026-04-19      | History         | 3              
+52              | Linda Davis     | 2027            | Data Visualization | 2.7             | 2026-05-18      | CS              | 4              
+52              | Linda Davis     | 2027            | Database Systems | 3.3             | 2026-02-15      | Math            | 4              
+52              | Linda Davis     | 2027            | Quantum Physics | 2.5             | 2026-01-24      | CS              | 3              
+53              | John Williams   | 2027            | Linear Algebra  | 3               | 2026-05-12      | Math            | 4              
+53              | John Williams   | 2027            | Natural Language Processing | 2.7             | 2026-04-12      | Math            | 4              
+53              | John Williams   | 2027            | World History   | 2.5             | 2026-02-28      | History         | 3              
+54              | Robert Williams | 2028            | Calculus I      | 2.5             | 2026-01-20      | Physics         | 4              
+54              | Robert Williams | 2028            | Data Visualization | 3.4             | 2026-05-27      | CS              | 4              
+54              | Robert Williams | 2028            | Natural Language Processing | 3.1             | 2026-05-14      | Math            | 4              
+55              | Mary Davis      | 2025            | Calculus I      | 2.7             | 2026-01-24      | Physics         | 4              
+55              | Mary Davis      | 2025            | Database Systems | 3.3             | 2026-05-21      | Math            | 4              
+55              | Mary Davis      | 2025            | Natural Language Processing | 3.2             | 2026-04-10      | Math            | 4              
+56              | John Miller     | 2027            | Database Systems | 2.6             | 2026-02-23      | Math            | 4              
+56              | John Miller     | 2027            | Intro to Python | 3.8             | 2026-03-15      | CS              | 3              
+56              | John Miller     | 2027            | Quantum Physics | 3.8             | 2026-02-21      | CS              | 3              
+57              | Jennifer Garcia | 2028            | Intro to Python | 2.2             | 2026-04-10      | CS              | 3              
+58              | James Miller    | 2026            | Intro to Python | 3.4             | 2026-04-10      | CS              | 3              
+58              | James Miller    | 2026            | World History   | 3.7             | 2026-01-12      | History         | 3              
+59              | Patricia Smith  | 2027            | Calculus I      | 3.1             | 2026-02-13      | Physics         | 4              
+59              | Patricia Smith  | 2027            | Data Visualization | 3.2             | 2026-02-22      | CS              | 4              
+59              | Patricia Smith  | 2027            | Linear Algebra  | 2.4             | 2026-01-18      | Math            | 4              
+60              | John Jones      | 2026            | AI Agents       | 3.8             | 2026-03-27      | History         | 3              
+60              | John Jones      | 2026            | Data Visualization | 2.9             | 2026-02-20      | CS              | 4              
+60              | John Jones      | 2026            | World History   | 3.2             | 2026-03-24      | History         | 3              
+61              | Linda Jones     | 2026            | Data Visualization | 3.9             | 2026-04-22      | CS              | 4              
+61              | Linda Jones     | 2026            | Natural Language Processing | 2.8             | 2026-03-16      | Math            | 4              
+62              | James Williams  | 2025            | Linear Algebra  | 3.1             | 2026-05-22      | Math            | 4              
+62              | James Williams  | 2025            | Machine Learning | 3.1             | 2026-04-10      | Math            | 4              
+62              | James Williams  | 2025            | Quantum Physics | 3.1             | 2026-03-19      | CS              | 3              
+63              | Linda Davis     | 2025            | Data Visualization | 3.2             | 2026-04-20      | CS              | 4              
+63              | Linda Davis     | 2025            | Natural Language Processing | 2.2             | 2026-05-23      | Math            | 4              
+63              | Linda Davis     | 2025            | World History   | 3.6             | 2026-01-28      | History         | 3              
+64              | Linda Johnson   | 2028            | Calculus I      | 3.1             | 2026-01-15      | Physics         | 4              
+64              | Linda Johnson   | 2028            | Data Visualization | 3.7             | 2026-01-26      | CS              | 4              
+64              | Linda Johnson   | 2028            | Natural Language Processing | 3.9             | 2026-02-19      | Math            | 4              
+65              | Mary Miller     | 2026            | None            | None            | None            | None            | None           
+66              | Linda Johnson   | 2026            | None            | None            | None            | None            | None           
+67              | James Jones     | 2028            | Data Visualization | 2.8             | 2026-05-19      | CS              | 4              
+67              | James Jones     | 2028            | Machine Learning | 3.2             | 2026-04-16      | Math            | 4              
+67              | James Jones     | 2028            | Natural Language Processing | 2               | 2026-05-25      | Math            | 4              
+68              | Michael Jones   | 2026            | Machine Learning | 2.1             | 2026-04-24      | Math            | 4              
+69              | Mary Jones      | 2025            | Intro to Python | 2.9             | 2026-01-19      | CS              | 3              
+69              | Mary Jones      | 2025            | Machine Learning | 2.3             | 2026-04-10      | Math            | 4              
+70              | Linda Williams  | 2025            | AI Agents       | 3.3             | 2026-01-24      | History         | 3              
+71              | Patricia Miller | 2025            | AI Agents       | 3.2             | 2026-02-13      | History         | 3              
+71              | Patricia Miller | 2025            | Machine Learning | 3.9             | 2026-01-13      | Math            | 4              
+71              | Patricia Miller | 2025            | World History   | 2.6             | 2026-02-10      | History         | 3              
+72              | Patricia Williams | 2025            | World History   | 2.3             | 2026-05-13      | History         | 3              
+73              | Michael Davis   | 2026            | Calculus I      | 4               | 2026-04-10      | Physics         | 4              
+73              | Michael Davis   | 2026            | Linear Algebra  | 2.2             | 2026-01-19      | Math            | 4              
+73              | Michael Davis   | 2026            | World History   | 3.1             | 2026-05-20      | History         | 3              
+74              | Robert Davis    | 2028            | Database Systems | 2.1             | 2026-04-13      | Math            | 4              
+74              | Robert Davis    | 2028            | Natural Language Processing | 3.9             | 2026-03-19      | Math            | 4              
+74              | Robert Davis    | 2028            | Quantum Physics | 3.5             | 2026-03-25      | CS              | 3              
+75              | John Williams   | 2026            | Data Visualization | 3.7             | 2026-04-19      | CS              | 4              
+75              | John Williams   | 2026            | Database Systems | 3.8             | 2026-01-27      | Math            | 4              
+75              | John Williams   | 2026            | Quantum Physics | 4               | 2026-04-18      | CS              | 3              
+76              | John Davis      | 2027            | Data Visualization | 2.8             | 2026-01-28      | CS              | 4              
+76              | John Davis      | 2027            | Linear Algebra  | 2.4             | 2026-05-16      | Math            | 4              
+76              | John Davis      | 2027            | Quantum Physics | 3.1             | 2026-01-25      | CS              | 3              
+77              | James Jones     | 2027            | AI Agents       | 2.5             | 2026-03-24      | History         | 3              
+77              | James Jones     | 2027            | Natural Language Processing | 3.4             | 2026-03-26      | Math            | 4              
+78              | Jennifer Brown  | 2026            | Machine Learning | 3.6             | 2026-01-24      | Math            | 4              
+78              | Jennifer Brown  | 2026            | Natural Language Processing | 3.6             | 2026-02-18      | Math            | 4              
+79              | Jennifer Brown  | 2025            | Intro to Python | 2.9             | 2026-03-17      | CS              | 3              
+80              | Mary Miller     | 2026            | Quantum Physics | 3.2             | 2026-05-13      | CS              | 3              
+81              | John Williams   | 2025            | Data Visualization | 3.1             | 2026-05-22      | CS              | 4              
+81              | John Williams   | 2025            | Quantum Physics | 2.3             | 2026-02-12      | CS              | 3              
+81              | John Williams   | 2025            | World History   | 3.1             | 2026-01-11      | History         | 3              
+82              | Robert Brown    | 2027            | Calculus I      | 3.8             | 2026-01-16      | Physics         | 4              
+82              | Robert Brown    | 2027            | Machine Learning | 3.4             | 2026-05-23      | Math            | 4              
+82              | Robert Brown    | 2027            | World History   | 2.7             | 2026-05-12      | History         | 3              
+83              | Michael Davis   | 2025            | Calculus I      | 3.9             | 2026-05-16      | Physics         | 4              
+83              | Michael Davis   | 2025            | Data Visualization | 3.1             | 2026-05-24      | CS              | 4              
+83              | Michael Davis   | 2025            | Intro to Python | 3.9             | 2026-04-13      | CS              | 3              
+84              | Robert Garcia   | 2026            | Data Visualization | 2.4             | 2026-04-24      | CS              | 4              
+84              | Robert Garcia   | 2026            | Machine Learning | 2.9             | 2026-01-27      | Math            | 4              
+84              | Robert Garcia   | 2026            | Quantum Physics | 3.5             | 2026-01-15      | CS              | 3              
+85              | James Garcia    | 2025            | Database Systems | 3.9             | 2026-03-28      | Math            | 4              
+85              | James Garcia    | 2025            | Machine Learning | 2.9             | 2026-04-25      | Math            | 4              
+85              | James Garcia    | 2025            | Natural Language Processing | 3.1             | 2026-05-10      | Math            | 4              
+86              | Jennifer Williams | 2025            | AI Agents       | 2.9             | 2026-02-17      | History         | 3              
+86              | Jennifer Williams | 2025            | Database Systems | 2.1             | 2026-05-18      | Math            | 4              
+86              | Jennifer Williams | 2025            | Machine Learning | 3.6             | 2026-01-18      | Math            | 4              
+87              | John Brown      | 2027            | AI Agents       | 2.7             | 2026-02-13      | History         | 3              
+88              | Jennifer Johnson | 2027            | AI Agents       | 3.9             | 2026-02-19      | History         | 3              
+88              | Jennifer Johnson | 2027            | Data Visualization | 3.4             | 2026-01-21      | CS              | 4              
+88              | Jennifer Johnson | 2027            | Linear Algebra  | 2.8             | 2026-02-19      | Math            | 4              
+89              | Jennifer Smith  | 2026            | AI Agents       | 2.2             | 2026-01-17      | History         | 3              
+89              | Jennifer Smith  | 2026            | Database Systems | 2.7             | 2026-05-10      | Math            | 4              
+89              | Jennifer Smith  | 2026            | World History   | 2.1             | 2026-04-16      | History         | 3              
+90              | Robert Smith    | 2025            | AI Agents       | 3.6             | 2026-03-17      | History         | 3              
+90              | Robert Smith    | 2025            | Database Systems | 2.1             | 2026-01-14      | Math            | 4              
+91              | Robert Johnson  | 2025            | Quantum Physics | 2.2             | 2026-03-22      | CS              | 3              
+92              | John Williams   | 2025            | AI Agents       | 3.3             | 2026-05-21      | History         | 3              
+92              | John Williams   | 2025            | Calculus I      | 3.8             | 2026-03-13      | Physics         | 4              
+92              | John Williams   | 2025            | Natural Language Processing | 2.8             | 2026-04-23      | Math            | 4              
+93              | Patricia Williams | 2027            | Intro to Python | 2.4             | 2026-02-16      | CS              | 3              
+94              | Linda Jones     | 2028            | Linear Algebra  | 2.5             | 2026-04-17      | Math            | 4              
+94              | Linda Jones     | 2028            | Natural Language Processing | 3.1             | 2026-05-19      | Math            | 4              
+95              | Mary Jones      | 2026            | Data Visualization | 2.9             | 2026-02-11      | CS              | 4              
+95              | Mary Jones      | 2026            | Linear Algebra  | 3               | 2026-02-27      | Math            | 4              
+96              | John Johnson    | 2026            | None            | None            | None            | None            | None           
+97              | Jennifer Brown  | 2028            | Intro to Python | 2.1             | 2026-02-16      | CS              | 3              
+97              | Jennifer Brown  | 2028            | Linear Algebra  | 2.7             | 2026-03-27      | Math            | 4              
+97              | Jennifer Brown  | 2028            | Machine Learning | 3.5             | 2026-02-19      | Math            | 4              
+98              | John Smith      | 2026            | Intro to Python | 3.8             | 2026-05-12      | CS              | 3              
+98              | John Smith      | 2026            | Linear Algebra  | 3.7             | 2026-05-12      | Math            | 4              
+99              | James Miller    | 2028            | Calculus I      | 3.9             | 2026-05-12      | Physics         | 4              
+99              | James Miller    | 2028            | Machine Learning | 4               | 2026-05-12      | Math            | 4              
+100             | Michael Johnson | 2026            | Database Systems | 3.5             | 2026-05-12      | Math            | 4              
+101             | New Student A   | 2026            | Intro to Python | 3.5             | 2026-01-01      | History         | 4              
+102             | New Student B   | 2026            | Intro to Python | 3.2             | 2026-01-01      | Biology         | 4              
+103             | New Student C   | 2026            | Machine Learning | 4.0             | 2026-01-01      | Art             | 4              
+98              | Jennifer J      | 2027            | Database Systems | 1.0             | 2026-01-01      | CS              | 4              
+98              | Jennifer J      | 2027            | Database Systems | 2.5             | 2026-01-01      | CS              | 4              
+99              | Jennifer B      | 2025            | Machine Learning | 0.0             | 2026-01-01      | CS              | 4              

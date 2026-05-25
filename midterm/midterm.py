@@ -210,114 +210,82 @@ def export_view_to_txt(db_name="university.db", output_file="university_data_den
 def add_fd_violations(file_path="university_data_denormalized.txt"):
     violations = [
         # Violation : CName -> Department
-        f"{'101':<15} | {'New Student A':<15} | {'Intro to Python':<15} | {'3.5':<15} | {'History':<15}\n",
-        f"{'102':<15} | {'New Student B':<15} | {'Intro to Python':<15} | {'3.2':<15} | {'Biology':<15}\n",
-        f"{'103':<15} | {'New Student C':<15} | {'Machine Learning':<15} | {'4.0':<15} | {'Art':<15}\n",
+        f"{'101':<15} | {'New Student A':<15} | {'2026':<15} | {'Intro to Python':<15} | {'3.5':<15} | {'2026-01-01':<15} | {'History':<15} | {'4':<15}\n",
+        f"{'102':<15} | {'New Student B':<15} | {'2026':<15} | {'Intro to Python':<15} | {'3.2':<15} | {'2026-01-01':<15} | {'Biology':<15} | {'4':<15}\n",
+        f"{'103':<15} | {'New Student C':<15} | {'2026':<15} | {'Machine Learning':<15} | {'4.0':<15} | {'2026-01-01':<15} | {'Art':<15} | {'4':<15}\n",
 
-        # Violation : {CName, StudentID} -> CGrade
-        f"{'98':<15} | {'Patricia Smith':<15} | {'Intro to Python':<15} | {'1.0':<15} | {'CS':<15}\n",
-        f"{'98':<15} | {'Patricia Smith':<15} | {'Intro to Python':<15} | {'2.5':<15} | {'CS':<15}\n",
-        f"{'99':<15} | {'Linda Garcia':<15} | {'Machine Learning':<15} | {'0.0':<15} | {'CS':<15}\n"
+        # Violation 2: {CName, StudentID} -> Different Grades (1.0 vs 2.5 for Student 98)
+        f"{'98':<15} | {'Jennifer J':<15} | {'2027':<15} | {'Database Systems':<15} | {'1.0':<15} | {'2026-01-01':<15} | {'CS':<15} | {'4':<15}\n",
+        f"{'98':<15} | {'Jennifer J':<15} | {'2027':<15} | {'Database Systems':<15} | {'2.5':<15} | {'2026-01-01':<15} | {'CS':<15} | {'4':<15}\n",
+        f"{'99':<15} | {'Jennifer B':<15} | {'2025':<15} | {'Machine Learning':<15} | {'0.0':<15} | {'2026-01-01':<15} | {'CS':<15} | {'4':<15}\n"
     ]
 
-    try:
-        with open(file_path, "a") as f:
-            f.writelines(violations)
-        print(f"Successfully added 6 violation rows to {file_path}")
-    except FileNotFoundError:
-        print(f"Error: {file_path} not found. Please run Part 2 first.")
+    with open(file_path, "a") as f:
+        f.writelines(violations)
+    print(f"Successfully added 6 violation rows.")
+
 
 # Part 4
 def detect_fd_violations(file_path="university_data_denormalized.txt"):
     data = []
-
-    # Read and parse the file
     try:
         with open(file_path, "r") as f:
             lines = f.readlines()
+            # Skip header and separator line
             for line in lines[2:]:
                 parts = [p.strip() for p in line.split("|")]
-                if len(parts) >= 5:
+                if len(parts) >= 8:
                     data.append({
                         'StudentID': parts[0],
-                        'Name': parts[1],
-                        'CName': parts[2],
-                        'CGrade': parts[3],
-                        'Department': parts[4]
+                        'CName':     parts[3],
+                        'CGrade':    parts[4],
+                        'Department':parts[6]
                     })
-    except FileNotFoundError:
-        print("File not found.")
-        return
+    except FileNotFoundError: return
 
-    # Check CName -> Department
-    cname_dept_map = {}
-    print(" Checking FD: CName -> Department ")
+    # Check FD: CName -> Department
+    cname_dept_map = defaultdict(set)
+    print("\n--- Checking FD: CName -> Department ---")
     for row in data:
-        cname = row['CName']
-        dept = row['Department']
+        if row['CName'].lower() != 'none':
+            cname_dept_map[row['CName']].add(row['Department'])
 
-        if cname not in cname_dept_map:
-            cname_dept_map[cname] = set()
-        cname_dept_map[cname].add(dept)
-
-    violations_found = False
     for cname, depts in cname_dept_map.items():
         if len(depts) > 1:
-            print(f"VIOLATION: Course '{cname}' maps to multiple departments: {depts}")
-            violations_found = True
-    if not violations_found: print("No violations found.")
+            print(f"VIOLATION: Course '{cname}' associated with multiple departments: {depts}")
 
-    # Check {CName, StudentID} -> CGrade
-    composite_grade_map = {}
-    print("\n Checking FD: {CName, StudentID} -> CGrade")
-    violations_found = False
+    # Check FD: {CName, StudentID} -> CGrade
+    composite_grade_map = defaultdict(set)
+    print("\n--- Checking FD: {CName, StudentID} -> CGrade ---")
     for row in data:
-        key = (row['CName'], row['StudentID'])
-        grade = row['CGrade']
-
-        if key not in composite_grade_map:
-            composite_grade_map[key] = set()
-        composite_grade_map[key].add(grade)
+        if row['CName'].lower() != 'none':
+            key = (row['CName'], row['StudentID'])
+            composite_grade_map[key].add(row['CGrade'])
 
     for (cname, sid), grades in composite_grade_map.items():
         if len(grades) > 1:
             print(f"VIOLATION: Student {sid} in '{cname}' has multiple grades: {grades}")
-            violations_found = True
-    if not violations_found: print("No violations found.")
 
 # Part 5
 def load_txt_to_sqlite(txt_file="university_data_denormalized.txt", db_name="university_flat.db"):
     conn = sqlite3.connect(db_name)
     cursor = conn.cursor()
-
-    # Create a single flat table
     cursor.execute("DROP TABLE IF EXISTS FlatUniversity")
     cursor.execute("""
         CREATE TABLE FlatUniversity (
             RowID INTEGER PRIMARY KEY AUTOINCREMENT,
-            StudentID TEXT,
-            Name TEXT,
-            CName TEXT,
-            CGrade TEXT,
-            Department TEXT
+            StudentID TEXT, Name TEXT, GradYear TEXT, 
+            CName TEXT, CGrade TEXT, Date_grades TEXT, 
+            Department TEXT, Credits TEXT
         )
     """)
-
-    # Load data from TXT
     with open(txt_file, "r") as f:
-        lines = f.readlines()[2:]  # Skip header and separator
+        lines = f.readlines()[2:]
         for line in lines:
-            parts = [p.strip() for p in line.split("|")]
-            if len(parts) == 5:
-                # Replace 'NULL' or 'None' strings with actual None (SQL NULL)
-                cleaned_parts = [None if p.upper() in ["NULL", "NONE"] else p for p in parts]
-                cursor.execute("""
-                    INSERT INTO FlatUniversity (StudentID, Name, CName, CGrade, Department) 
-                    VALUES (?, ?, ?, ?, ?)
-                """, cleaned_parts)
-
+            parts = [None if p.strip().upper() in ["NULL", "NONE"] else p.strip() for p in line.split("|")]
+            if len(parts) == 8:
+                cursor.execute("INSERT INTO FlatUniversity (StudentID, Name, GradYear, CName, CGrade, Date_grades, Department, Credits) VALUES (?,?,?,?,?,?,?,?)", parts)
     conn.commit()
-    print(f"Loaded data into table 'FlatUniversity' in {db_name}")
     conn.close()
 
 # Part 5.a and 5.b
